@@ -3,9 +3,9 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "VocabularyHelp">
-      <FileRef
-         location = "group:">
-      </FileRef>
+      name = "New Group 1">
    </Group>
+   <FileRef
+      location = "container:">
+   </FileRef>
 </Workspace>

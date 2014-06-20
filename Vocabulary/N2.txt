@@ -1,0 +1,90 @@
+﻿あいかわらず	/		/	as ever,as usual,the same	/		/
+あいまい	/		/	vague,ambiguous	/	含糊，可疑	/
+あきれる	/		/	to be amazed,to be shocked	/	吃惊，惊讶	/
+あたりまえ	/		/	usual,common,ordinary	/		/
+厚かましい	/	あつかましい	/	impudent,shameless,brazen	/		/
+危うい	/	あやうい	/	dangerous,critical,grave	/		/
+怪しい	/	あやしい	/	suspicious,dubious,doubtful	/		/
+争う	/	あらそう	/	to dispute,to argue,to be at variance,to compete	/		/
+有難い	/	ありがたい	/	grateful,thankful,welcome,appreciated,evoking gratitude	/	值得感谢	/
+あわただしい	/		/	busy,hurried,confused,flurried	/	慌张	/
+あわてる	/		/	to become confused	/	惊慌	/
+生き生き	/	いきいき	/	vividly,lively	/		/
+いきなり	/		/	(uk) abruptly,suddenly,all of a sudden,without warning	/	突然	/
+勇ましい	/	いさましい	/	brave,valiant,gallant,courageous	/		/
+いつのまにか	/		/	before one knows,unnoticed,unawares	/	不知不觉	/
+いよいよ	/		/	more and more,all the more,increasingly,at last,beyond doubt	/		/
+煎る	/	いる	/	to parch,to fry	/		/
+炒る	/	いる	/		/		/
+飢える	/	うえる	/	to starve	/		/
+承る	/	うけたまわる	/	(hum) to hear,to be told,to know	/		/
+打ち消す	/	うちけす	/	to deny,to negate,to contradict	/	否认	/
+討つ	/	うつ	/	to attack,to avenge	/		/
+うっかり	/		/	carelessly,thoughtlessly,inadvertently	/	不留神	/
+映す	/	うつす	/	to project,to reflect,to cast (shadow)	/		/
+埋める	/	うめる	/	to bury,to fill up,to fill (a seat, a vacant position)	/		/
+敬う	/	うやまう	/	to show respect,to honour	/		/
+裏返す	/	うらがえす	/	to turn inside out,to turn (something) over	/		/
+占う	/	うらなう	/	to forecast,to predict	/		/
+恨み	/	うらみ	/	resentment	/		/
+うろうろ	/		/	loiteringly,aimless wandering	/	徘徊	/
+うんと	/		/	a great deal,very much	/	量大	/
+おおざっぱ	/		/	rough (not precise),broad,sketchy	/	粗心	/
+大凡	/	おおよそ	/	about,roughly,as a rule,approximately	/	大体	/
+おかず	/		/	side dish,accompaniment for rice dishes	/		/
+拝む	/	おがむ	/	to worship,to beg,to make a supplication	/		/
+補う	/	おぎなう	/	to compensate for	/		/
+おきのどくに	/		/		/	真过意不去 	/
+怠る	/	おこたる	/	to neglect,to be off guard,to be feeling better	/		/
+納める	/	おさめる	/	to obtain,to reap,to pay,to supply,to accept	/		/
+治める	/	おさめる	/	(1) to govern,to manage,(2) to subdue	/		/
+惜しい	/	おしい	/	regrettable,disappointing,precious	/		/
+おしゃれ	/		/	smartly dressed,someone smartly dressed,fashion-conscious	/		/
+おどかす	/		/	to threaten,to coerce	/	威胁	/
+各々	/	おのおの	/	each,every,either,respectively,severally	/		/
+重たい	/	おもたい	/	heavy,massive,serious	/		/
+蚊	/	か	/	mosquito	/		/
+掻く	/	かく	/	to scratch,to perspire	/		/
+嗅ぐ	/	かぐ	/	to sniff,to smell	/		/
+かじる	/		/	to chew,to bite (at),to gnaw,to nibble	/	咬	/
+傾く	/	かたむく	/	to incline toward,to slant,to lurch	/		/
+片寄る	/	かたよる	/	to be one-sided,to incline,to be partial	/	偏颇	/
+担ぐ	/	かつぐ	/	to shoulder,to carry on shoulder	/		/
+仮名遣い	/	かなづかい	/	kana orthography,syllabary spelling	/	假名用法	/
+兼ねる	/	かねる	/	to hold (position),to serve,to be unable	/		/
+被せる	/	かぶせる	/	to cover (with something)	/		/
+からかう	/		/	to ridicule,to tease,to banter with,to make fun of	/	开玩笑	/
+空っぽ	/	からっぽ	/	empty,vacant,hollow	/		/
+かわいがる	/		/	to love,to be affectionate	/		/
+きっかけ	/		/	chance,start,cue,excuse	/	契机	/
+斬る	/	きる	/	(v5r) to behead,to murder	/		/
+櫛	/	くし	/	comb	/	梳子	/
+くしゃみ	/		/	sneeze	/	喷嚏	/
+砕く	/	くだく	/	to break,to smash	/		/
+くたびれる	/		/	to get tired,to wear out	/	疲劳	/
+くだらない	/		/	good-for-nothing,stupid,trivial,worthless	/	无用	/
+くっつける	/		/	to attach	/		/
+配る	/	くばる	/	to distribute,to deliver	/		/
+汲む	/	くむ	/	(1) to draw (water),to dip,to scoop,to pump	/		/
+酌む	/	くむ	/	to serve sake	/		/
+くるむ	/		/	to be engulfed in,to be enveloped by,to wrap up	/	包	/
+咥える	/	くわえる	/		/	含	/
+削る	/	けずる	/	to cut down little by little,to take a percentage	/		/
+煙い	/	けむい	/	smoky	/		/
+蹴る	/	ける	/	to kick	/		/
+険しい	/	けわしい	/	inaccessible place,sharp eyes	/		/
+恋しい	/	こいしい	/	(1) dear,beloved,darling,(2) yearned for	/		/
+請う	/	こう	/	to ask,to request	/		/
+超える	/	こえる	/	to exceed,to cross over,to cross	/		/
+凍える	/	こごえる	/	to freeze,to be chilled,to be frozen	/		/
+心当たり	/	こころあたり	/	having some knowledge of,happening to know	/	估计，猜想	/
+腰掛け	/	こしかけ	/	seat,bench	/		/
+こしらえる	/		/	to make,to manufacture	/		/
+超す	/	こす	/	to cross,to pass,to tide over	/		/
+擦る	/	こする	/	to rub,to chafe,to file,to frost (glass),to strike (match)	/		/
+小遣い	/	こづかい	/	personal expenses,pocket money,spending money,incidental expenses,allowance	/	零钱	/
+こっそり	/		/	stealthily,secretly	/	悄悄地	/
+言葉遣い	/	ことばづかい	/	speech,expression,wording	/		/
+こないだ	/		/	the other day,lately,recently	/		/
+こぼす	/		/	to spill	/	洒	/
+こらえる	/		/	to bear,to stand,to endure,to put up with	/		/
