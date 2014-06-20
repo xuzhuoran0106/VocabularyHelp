@@ -60,11 +60,34 @@
                                     <segue destination="D7e-KH-T7D" kind="modal" id="CAJ-3l-0cT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eR-Mt-zJx">
+                                <rect key="frame" x="110" y="446" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="COOK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="COOK:" destination="ZAy-Y3-47L" eventType="touchUpInside" id="e90-PX-7vR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTu-Ui-T03">
+                                <rect key="frame" x="0.0" y="314" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="N1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="D7e-KH-T7D" kind="modal" id="gh4-AN-S0K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
                     </view>
                     <navigationItem key="navigationItem" title="Choose Level" id="DIZ-GH-3pv"/>
                     <connections>
+                        <outlet property="ButtonN1" destination="HTu-Ui-T03" id="HRD-gR-neI"/>
                         <outlet property="ButtonN2" destination="Fmx-wL-Zr9" id="5hT-Nl-4Rv"/>
                         <outlet property="ButtonN3" destination="L5B-97-UL6" id="Htl-QJ-ujp"/>
                         <outlet property="ButtonN4" destination="zvz-oQ-ySS" id="PD5-DV-dFF"/>

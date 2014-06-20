@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *ButtonN3;
 @property (weak, nonatomic) IBOutlet UIButton *ButtonN4;
 @property (weak, nonatomic) IBOutlet UIButton *ButtonN5;
+@property (weak, nonatomic) IBOutlet UIButton *ButtonN1;
 
 @end
 
@@ -49,13 +50,6 @@
     // Pass the selected object to the new view controller.
     
     VocabularyData *data=[VocabularyData getSharedInstance];
-    NSFileManager *manager = [NSFileManager defaultManager];
-    //        if (![manager fileExistsAtPath:xmlpath])
-    //        {
-    //            NSString *path = [[NSBundle mainBundle] pathForResource:@"N2" ofType:@"txt" ];
-    //            //convert
-    //            [data ConvertPath:path Name:@"N2" ToPath:xmlpath];
-    //        }
     NSString *xmlpath=NULL;
     [data Clear];
     if ([sender isEqual:_ButtonN2])
@@ -74,13 +68,59 @@
     {
         xmlpath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"N5Record.xml"];
     }
+    if ([sender isEqual:_ButtonN1])
+    {
+        xmlpath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"N1Record.xml"];
+    }
     //load
     if(![data LoadPath:xmlpath])
     {
         [data Clear];
     }
 }
-
+- (IBAction)COOK:(id)sender
+{
+    UIAlertView* finalCheck = [[UIAlertView alloc]
+                               initWithTitle:@"COOK"
+                               message:@"Sure to reset all records?"
+                               delegate:self
+                               cancelButtonTitle:@"OK"
+                               otherButtonTitles:@"Cancel",nil];
+    [finalCheck show];
+}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0)//ok
+    {
+        for (int i=1; i<=5; i++)
+        {
+            NSFileManager *manager = [NSFileManager defaultManager];
+            NSString *name=[@"N" stringByAppendingString:[NSString stringWithFormat:@"%d",i]];
+            NSString *topath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@"Record.xml"]];
+            if ([manager fileExistsAtPath:topath])
+            {
+                [manager removeItemAtPath:topath error:nil];
+            }
+            NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@".txt"]];
+            if (![manager fileExistsAtPath:path])
+            {
+                path=[[NSBundle mainBundle] pathForResource:name ofType:@"txt" ];
+            }
+            if (![manager fileExistsAtPath:path])
+            {
+                continue;
+            }
+            VocabularyData *data=[VocabularyData getSharedInstance];
+            [data Clear];
+            [data ConvertPath:path Name:name ToPath:topath];
+            [data Clear];
+        }
+    }
+    else if(buttonIndex == 1)//cacel
+    {
+        return;
+    }
+}
 
 - (IBAction)unwindToMain:(UIStoryboardSegue *)segue
 {

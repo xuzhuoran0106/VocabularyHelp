@@ -10,6 +10,7 @@
 		667FB17C1951DB0900C994B6 /* N2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 667FB17A1951DB0900C994B6 /* N2.txt */; };
 		667FB18B1952FC0300C994B6 /* OneWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 667FB18A1952FC0300C994B6 /* OneWord.m */; };
 		667FB18E1952FCFE00C994B6 /* VocabularyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 667FB18D1952FCFE00C994B6 /* VocabularyData.m */; };
+		667FB1901954328500C994B6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB18F1954328500C994B6 /* icon.png */; };
 		66CF362F1951765600C2F004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF362E1951765600C2F004 /* Foundation.framework */; };
 		66CF36311951765600C2F004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36301951765600C2F004 /* CoreGraphics.framework */; };
 		66CF36331951765600C2F004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36321951765600C2F004 /* UIKit.framework */; };
@@ -47,7 +48,8 @@
 		667FB18A1952FC0300C994B6 /* OneWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneWord.m; sourceTree = "<group>"; };
 		667FB18C1952FCFE00C994B6 /* VocabularyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabularyData.h; sourceTree = "<group>"; };
 		667FB18D1952FCFE00C994B6 /* VocabularyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabularyData.m; sourceTree = "<group>"; };
-		66CF362B1951765600C2F004 /* VocabularyHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		667FB18F1954328500C994B6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		66CF362B1951765600C2F004 /* VocabularyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF362E1951765600C2F004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66CF36301951765600C2F004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		66CF36321951765600C2F004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -116,6 +118,7 @@
 		66CF36221951765600C2F004 = {
 			isa = PBXGroup;
 			children = (
+				667FB18F1954328500C994B6 /* icon.png */,
 				667FB17E1952C90200C994B6 /* xml */,
 				667FB1791951DB0900C994B6 /* Vocabulary */,
 				66CF36341951765600C2F004 /* VocabularyHelp */,
@@ -128,7 +131,7 @@
 		66CF362C1951765600C2F004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66CF362B1951765600C2F004 /* VocabularyHelp.app */,
+				66CF362B1951765600C2F004 /* VocabularyHelper.app */,
 				66CF36461951765600C2F004 /* VocabularyHelpTests.xctest */,
 			);
 			name = Products;
@@ -211,7 +214,7 @@
 			);
 			name = VocabularyHelp;
 			productName = VocabularyHelp;
-			productReference = 66CF362B1951765600C2F004 /* VocabularyHelp.app */;
+			productReference = 66CF362B1951765600C2F004 /* VocabularyHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		66CF36451951765600C2F004 /* VocabularyHelpTests */ = {
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				667FB17C1951DB0900C994B6 /* N2.txt in Resources */,
+				667FB1901954328500C994B6 /* icon.png in Resources */,
 				66CF36391951765600C2F004 /* InfoPlist.strings in Resources */,
 				66CF36411951765600C2F004 /* Images.xcassets in Resources */,
 				66CF365E195176FE00C2F004 /* main.storyboard in Resources */,
@@ -423,7 +427,7 @@
 				GCC_PREFIX_HEADER = "VocabularyHelp/VocabularyHelp-Prefix.pch";
 				INFOPLIST_FILE = "VocabularyHelp/VocabularyHelp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VocabularyHelper;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -441,7 +445,7 @@
 				GCC_PREFIX_HEADER = "VocabularyHelp/VocabularyHelp-Prefix.pch";
 				INFOPLIST_FILE = "VocabularyHelp/VocabularyHelp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VocabularyHelper;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
