@@ -10,7 +10,33 @@
 		667FB17C1951DB0900C994B6 /* N2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 667FB17A1951DB0900C994B6 /* N2.txt */; };
 		667FB18B1952FC0300C994B6 /* OneWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 667FB18A1952FC0300C994B6 /* OneWord.m */; };
 		667FB18E1952FCFE00C994B6 /* VocabularyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 667FB18D1952FCFE00C994B6 /* VocabularyData.m */; };
-		667FB1901954328500C994B6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB18F1954328500C994B6 /* icon.png */; };
+		667FB1941955C52300C994B6 /* icon_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1911955C52300C994B6 /* icon_76.png */; };
+		667FB1951955C52300C994B6 /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1921955C52300C994B6 /* icon_120.png */; };
+		667FB1961955C52300C994B6 /* icon_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1931955C52300C994B6 /* icon_152.png */; };
+		667FB19B1955C83E00C994B6 /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1971955C83E00C994B6 /* icon_29.png */; };
+		667FB19C1955C83E00C994B6 /* icon_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1981955C83E00C994B6 /* icon_40.png */; };
+		667FB19D1955C83E00C994B6 /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1991955C83E00C994B6 /* icon_58.png */; };
+		667FB19E1955C83E00C994B6 /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB19A1955C83E00C994B6 /* icon_80.png */; };
+		667FB1A11955CA6600C994B6 /* MainMyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CF36F11951873900C2F004 /* MainMyView.m */; };
+		667FB1A21955CA6600C994B6 /* OneWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 667FB18A1952FC0300C994B6 /* OneWord.m */; };
+		667FB1A31955CA6600C994B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CF363E1951765600C2F004 /* AppDelegate.m */; };
+		667FB1A41955CA6600C994B6 /* VocabularyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 667FB18D1952FCFE00C994B6 /* VocabularyData.m */; };
+		667FB1A51955CA6600C994B6 /* VocabularyMyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CF36F41951875200C2F004 /* VocabularyMyView.m */; };
+		667FB1A61955CA6600C994B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CF363A1951765600C2F004 /* main.m */; };
+		667FB1A81955CA6600C994B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36301951765600C2F004 /* CoreGraphics.framework */; };
+		667FB1A91955CA6600C994B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36321951765600C2F004 /* UIKit.framework */; };
+		667FB1AA1955CA6600C994B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF362E1951765600C2F004 /* Foundation.framework */; };
+		667FB1AC1955CA6600C994B6 /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB19A1955C83E00C994B6 /* icon_80.png */; };
+		667FB1AD1955CA6600C994B6 /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1921955C52300C994B6 /* icon_120.png */; };
+		667FB1AE1955CA6600C994B6 /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1971955C83E00C994B6 /* icon_29.png */; };
+		667FB1AF1955CA6600C994B6 /* N2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 667FB17A1951DB0900C994B6 /* N2.txt */; };
+		667FB1B01955CA6600C994B6 /* icon_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1911955C52300C994B6 /* icon_76.png */; };
+		667FB1B11955CA6600C994B6 /* icon_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1981955C83E00C994B6 /* icon_40.png */; };
+		667FB1B21955CA6600C994B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66CF36371951765600C2F004 /* InfoPlist.strings */; };
+		667FB1B31955CA6600C994B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CF36401951765600C2F004 /* Images.xcassets */; };
+		667FB1B41955CA6600C994B6 /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1991955C83E00C994B6 /* icon_58.png */; };
+		667FB1B51955CA6600C994B6 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CF365D195176FE00C2F004 /* main.storyboard */; };
+		667FB1B61955CA6600C994B6 /* icon_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1931955C52300C994B6 /* icon_152.png */; };
 		66CF362F1951765600C2F004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF362E1951765600C2F004 /* Foundation.framework */; };
 		66CF36311951765600C2F004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36301951765600C2F004 /* CoreGraphics.framework */; };
 		66CF36331951765600C2F004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36321951765600C2F004 /* UIKit.framework */; };
@@ -48,7 +74,15 @@
 		667FB18A1952FC0300C994B6 /* OneWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneWord.m; sourceTree = "<group>"; };
 		667FB18C1952FCFE00C994B6 /* VocabularyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabularyData.h; sourceTree = "<group>"; };
 		667FB18D1952FCFE00C994B6 /* VocabularyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabularyData.m; sourceTree = "<group>"; };
-		667FB18F1954328500C994B6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		667FB1911955C52300C994B6 /* icon_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_76.png; sourceTree = "<group>"; };
+		667FB1921955C52300C994B6 /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120.png; sourceTree = "<group>"; };
+		667FB1931955C52300C994B6 /* icon_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_152.png; sourceTree = "<group>"; };
+		667FB1971955C83E00C994B6 /* icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_29.png; sourceTree = "<group>"; };
+		667FB1981955C83E00C994B6 /* icon_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_40.png; sourceTree = "<group>"; };
+		667FB1991955C83E00C994B6 /* icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58.png; sourceTree = "<group>"; };
+		667FB19A1955C83E00C994B6 /* icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80.png; sourceTree = "<group>"; };
+		667FB1BA1955CA6600C994B6 /* VocabularyHelp copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VocabularyHelp copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		667FB1BB1955CA6600C994B6 /* VocabularyHelp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VocabularyHelp copy-Info.plist"; path = "/Users/xuzhuoran/Documents/VocabularyHelp/VocabularyHelp copy-Info.plist"; sourceTree = "<absolute>"; };
 		66CF362B1951765600C2F004 /* VocabularyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF362E1951765600C2F004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66CF36301951765600C2F004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,6 +107,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		667FB1A71955CA6600C994B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667FB1A81955CA6600C994B6 /* CoreGraphics.framework in Frameworks */,
+				667FB1A91955CA6600C994B6 /* UIKit.framework in Frameworks */,
+				667FB1AA1955CA6600C994B6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66CF36281951765600C2F004 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,13 +162,20 @@
 		66CF36221951765600C2F004 = {
 			isa = PBXGroup;
 			children = (
-				667FB18F1954328500C994B6 /* icon.png */,
+				667FB1971955C83E00C994B6 /* icon_29.png */,
+				667FB1981955C83E00C994B6 /* icon_40.png */,
+				667FB1991955C83E00C994B6 /* icon_58.png */,
+				667FB19A1955C83E00C994B6 /* icon_80.png */,
+				667FB1911955C52300C994B6 /* icon_76.png */,
+				667FB1921955C52300C994B6 /* icon_120.png */,
+				667FB1931955C52300C994B6 /* icon_152.png */,
 				667FB17E1952C90200C994B6 /* xml */,
 				667FB1791951DB0900C994B6 /* Vocabulary */,
 				66CF36341951765600C2F004 /* VocabularyHelp */,
 				66CF364D1951765600C2F004 /* VocabularyHelpTests */,
 				66CF362D1951765600C2F004 /* Frameworks */,
 				66CF362C1951765600C2F004 /* Products */,
+				667FB1BB1955CA6600C994B6 /* VocabularyHelp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +184,7 @@
 			children = (
 				66CF362B1951765600C2F004 /* VocabularyHelper.app */,
 				66CF36461951765600C2F004 /* VocabularyHelpTests.xctest */,
+				667FB1BA1955CA6600C994B6 /* VocabularyHelp copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,6 +252,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		667FB19F1955CA6600C994B6 /* VocabularyHelp copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 667FB1B71955CA6600C994B6 /* Build configuration list for PBXNativeTarget "VocabularyHelp copy" */;
+			buildPhases = (
+				667FB1A01955CA6600C994B6 /* Sources */,
+				667FB1A71955CA6600C994B6 /* Frameworks */,
+				667FB1AB1955CA6600C994B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VocabularyHelp copy";
+			productName = VocabularyHelp;
+			productReference = 667FB1BA1955CA6600C994B6 /* VocabularyHelp copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		66CF362A1951765600C2F004 /* VocabularyHelp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66CF36571951765600C2F004 /* Build configuration list for PBXNativeTarget "VocabularyHelp" */;
@@ -263,20 +332,45 @@
 			targets = (
 				66CF362A1951765600C2F004 /* VocabularyHelp */,
 				66CF36451951765600C2F004 /* VocabularyHelpTests */,
+				667FB19F1955CA6600C994B6 /* VocabularyHelp copy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		667FB1AB1955CA6600C994B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667FB1AC1955CA6600C994B6 /* icon_80.png in Resources */,
+				667FB1AD1955CA6600C994B6 /* icon_120.png in Resources */,
+				667FB1AE1955CA6600C994B6 /* icon_29.png in Resources */,
+				667FB1AF1955CA6600C994B6 /* N2.txt in Resources */,
+				667FB1B01955CA6600C994B6 /* icon_76.png in Resources */,
+				667FB1B11955CA6600C994B6 /* icon_40.png in Resources */,
+				667FB1B21955CA6600C994B6 /* InfoPlist.strings in Resources */,
+				667FB1B31955CA6600C994B6 /* Images.xcassets in Resources */,
+				667FB1B41955CA6600C994B6 /* icon_58.png in Resources */,
+				667FB1B51955CA6600C994B6 /* main.storyboard in Resources */,
+				667FB1B61955CA6600C994B6 /* icon_152.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66CF36291951765600C2F004 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667FB19E1955C83E00C994B6 /* icon_80.png in Resources */,
+				667FB1951955C52300C994B6 /* icon_120.png in Resources */,
+				667FB19B1955C83E00C994B6 /* icon_29.png in Resources */,
 				667FB17C1951DB0900C994B6 /* N2.txt in Resources */,
-				667FB1901954328500C994B6 /* icon.png in Resources */,
+				667FB1941955C52300C994B6 /* icon_76.png in Resources */,
+				667FB19C1955C83E00C994B6 /* icon_40.png in Resources */,
 				66CF36391951765600C2F004 /* InfoPlist.strings in Resources */,
 				66CF36411951765600C2F004 /* Images.xcassets in Resources */,
+				667FB19D1955C83E00C994B6 /* icon_58.png in Resources */,
 				66CF365E195176FE00C2F004 /* main.storyboard in Resources */,
+				667FB1961955C52300C994B6 /* icon_152.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +385,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		667FB1A01955CA6600C994B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667FB1A11955CA6600C994B6 /* MainMyView.m in Sources */,
+				667FB1A21955CA6600C994B6 /* OneWord.m in Sources */,
+				667FB1A31955CA6600C994B6 /* AppDelegate.m in Sources */,
+				667FB1A41955CA6600C994B6 /* VocabularyData.m in Sources */,
+				667FB1A51955CA6600C994B6 /* VocabularyMyView.m in Sources */,
+				667FB1A61955CA6600C994B6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66CF36271951765600C2F004 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +449,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		667FB1B81955CA6600C994B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VocabularyHelp/VocabularyHelp-Prefix.pch";
+				INFOPLIST_FILE = "VocabularyHelp copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "VocabularyHelp copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		667FB1B91955CA6600C994B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VocabularyHelp/VocabularyHelp-Prefix.pch";
+				INFOPLIST_FILE = "VocabularyHelp copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "VocabularyHelp copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		66CF36551951765600C2F004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -417,8 +560,8 @@
 		66CF36581951765600C2F004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
@@ -426,8 +569,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VocabularyHelp/VocabularyHelp-Prefix.pch";
 				INFOPLIST_FILE = "VocabularyHelp/VocabularyHelp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = VocabularyHelper;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -435,8 +579,8 @@
 		66CF36591951765600C2F004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
@@ -444,8 +588,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VocabularyHelp/VocabularyHelp-Prefix.pch";
 				INFOPLIST_FILE = "VocabularyHelp/VocabularyHelp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = VocabularyHelper;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -493,6 +638,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		667FB1B71955CA6600C994B6 /* Build configuration list for PBXNativeTarget "VocabularyHelp copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				667FB1B81955CA6600C994B6 /* Debug */,
+				667FB1B91955CA6600C994B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		66CF36261951765600C2F004 /* Build configuration list for PBXProject "VocabularyHelp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

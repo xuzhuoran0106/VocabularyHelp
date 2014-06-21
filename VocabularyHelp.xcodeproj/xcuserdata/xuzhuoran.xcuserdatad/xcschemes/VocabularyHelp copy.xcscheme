@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "66CF362A1951765600C2F004"
+               BlueprintIdentifier = "667FB19F1955CA6600C994B6"
                BuildableName = "VocabularyHelper.app"
-               BlueprintName = "VocabularyHelp"
+               BlueprintName = "VocabularyHelp copy"
                ReferencedContainer = "container:VocabularyHelp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "66CF36451951765600C2F004"
-               BuildableName = "VocabularyHelpTests.xctest"
-               BlueprintName = "VocabularyHelpTests"
-               ReferencedContainer = "container:VocabularyHelp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66CF362A1951765600C2F004"
+            BlueprintIdentifier = "667FB19F1955CA6600C994B6"
             BuildableName = "VocabularyHelper.app"
-            BlueprintName = "VocabularyHelp"
+            BlueprintName = "VocabularyHelp copy"
             ReferencedContainer = "container:VocabularyHelp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66CF362A1951765600C2F004"
+            BlueprintIdentifier = "667FB19F1955CA6600C994B6"
             BuildableName = "VocabularyHelper.app"
-            BlueprintName = "VocabularyHelp"
+            BlueprintName = "VocabularyHelp copy"
             ReferencedContainer = "container:VocabularyHelp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -79,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66CF362A1951765600C2F004"
+            BlueprintIdentifier = "667FB19F1955CA6600C994B6"
             BuildableName = "VocabularyHelper.app"
-            BlueprintName = "VocabularyHelp"
+            BlueprintName = "VocabularyHelp copy"
             ReferencedContainer = "container:VocabularyHelp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
