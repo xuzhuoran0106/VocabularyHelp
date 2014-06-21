@@ -251,6 +251,10 @@ static VocabularyData *sharedInstance = nil;
     try
     {
         NSFileManager *manager = [NSFileManager defaultManager];
+        if ([manager fileExistsAtPath:path])
+        {
+            [manager removeItemAtPath:path error:nil];
+        }
         [manager copyItemAtPath:tmpPath toPath:path error:nil];
     }
     catch(...)
@@ -352,6 +356,13 @@ static VocabularyData *sharedInstance = nil;
         _CurrentIndexPointer=&_currentIndex;
         return [(NSNumber*)_midvec[old] intValue];
     }
+    if ([_midvec count]==0 && [_hardvec count]>0)
+    {
+        if (arc4random()%100<40+[_hardvec count] && [_hardvec count]>0)
+        {
+            return [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
+        }
+    }
     if ([_easyVec count]>0)
     {
         if (arc4random()%100<10+[_hardvec count] && [_hardvec count]>0)
@@ -419,7 +430,7 @@ static VocabularyData *sharedInstance = nil;
     OneWord *one =  _data[index];
     //
     one.count += 3;
-    one.count = min(20,one.count);
+    one.count = min(15,one.count);
     //
     if (one.count>=11&&![_hardvec containsObject:[NSNumber numberWithInt:index]])
     {
@@ -465,7 +476,6 @@ static VocabularyData *sharedInstance = nil;
     {
         _currentIndex=0;
     }
-    _doneThisTime++;
     if(one.tested==false)
     {
         one.tested=true;
@@ -477,6 +487,7 @@ static VocabularyData *sharedInstance = nil;
     {
         [_checked addObject:[NSNumber numberWithInt:index]];
     }
+     _doneThisTime=[_checked count];
     //
     _SaveCount++;
     if (_SaveCount>30)
