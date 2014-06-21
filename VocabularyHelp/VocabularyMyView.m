@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *ButtonWrong;
 @property (weak, nonatomic) IBOutlet UIButton *ButtonCheckAnswer;
 @property (weak, nonatomic) IBOutlet UITextView *TextComment;
-@property (weak, nonatomic) IBOutlet UILabel *TextMeaning;
+@property (weak, nonatomic) IBOutlet UITextView *TextMeaning;
 @property (weak, nonatomic) IBOutlet UILabel *Textkana;
 @property (weak, nonatomic) IBOutlet UILabel *TextKanji;
 @property (weak, nonatomic) IBOutlet UILabel *NumNotTested;
@@ -64,6 +64,7 @@
                                              selector:@selector(applicationWillTerminate:)
                                                  name:UIApplicationWillTerminateNotification
                                                object:nil]; //
+    //[_TextMeaning setFont:[UIFont fontWithName:@"System" size:1]];
     [self LoadNext];
 }
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -204,10 +205,16 @@
     {
         return;
     }
-    
-    VocabularyData *data=[VocabularyData getSharedInstance];
-    [data SetRight:_CurrentIndex];
-    [self LoadNext];
+    try
+    {
+        VocabularyData *data=[VocabularyData getSharedInstance];
+        [data SetRight:_CurrentIndex];
+        [self LoadNext];
+    }
+    catch(...)
+    {
+        return;
+    }
 }
 - (IBAction)ButtonWrong:(id)sender
 {
@@ -220,9 +227,16 @@
         return;
     }
     
-    VocabularyData *data=[VocabularyData getSharedInstance];
-    [data SetWrong:_CurrentIndex];
-    [self LoadNext];
+    try
+    {
+        VocabularyData *data=[VocabularyData getSharedInstance];
+        [data SetWrong:_CurrentIndex];
+        [self LoadNext];
+    }
+    catch(...)
+    {
+        return;
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////////////

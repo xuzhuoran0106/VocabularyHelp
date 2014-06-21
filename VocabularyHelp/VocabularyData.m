@@ -30,6 +30,8 @@ static VocabularyData *sharedInstance = nil;
     
     NSMutableArray* _checked;
     
+    int *_CurrentIndexPointer;
+    
 }
 -(id)init
 {
@@ -55,6 +57,7 @@ static VocabularyData *sharedInstance = nil;
         _HardCountAtLoad=0;
         
         _doneThisTime=0;
+        _CurrentIndexPointer=NULL;
     }
     
     return self;
@@ -80,6 +83,7 @@ static VocabularyData *sharedInstance = nil;
     _HardCountAtLoad=0;
     
     _doneThisTime=0;
+    _CurrentIndexPointer=NULL;
 }
 +(VocabularyData *)getSharedInstance
 {
@@ -171,6 +175,7 @@ static VocabularyData *sharedInstance = nil;
 {
     if([_path isEqualToString:[NSString stringWithUTF8String:"Not Loaded"]])
         return false;
+    NSString *tmpPath=[[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[_level stringByAppendingString:@"Tmp.xml"]];
     try
     {
         xml_document<> doc;
@@ -235,13 +240,22 @@ static VocabularyData *sharedInstance = nil;
         xml_node<>* nodeCurrentIndex = doc.allocate_node(node_element,"currentIndex",doc.allocate_string([[NSString stringWithFormat:@"%d",_currentIndex] UTF8String]));
         nodeVocabulary->append_node(nodeCurrentIndex);
         
-        ofstream out([path UTF8String]);
+        ofstream out([tmpPath UTF8String]);
         out << doc;
         out.close();
     }
     catch(...)
     {
         return FALSE;
+    }
+    try
+    {
+        NSFileManager *manager = [NSFileManager defaultManager];
+        [manager copyItemAtPath:tmpPath toPath:path error:nil];
+    }
+    catch(...)
+    {
+        return false;
     }
     return true;
 }
@@ -289,10 +303,19 @@ static VocabularyData *sharedInstance = nil;
         [_easyVec removeAllObjects];
         [_hardvec removeAllObjects];
         [_midvec removeAllObjects];
+        //
+        NSMutableArray *oriRndVec=[NSMutableArray array];
         for(int i=0;i<[_data count];i++)
         {
-            [_midvec addObject:[NSNumber numberWithInt:i]];
+            [oriRndVec addObject:[NSNumber numberWithInt:i]];
         }
+        while ([oriRndVec count]!=0)
+        {
+            int rndIndex=arc4random()%[oriRndVec count];
+            [_midvec addObject:oriRndVec[rndIndex]];
+            [oriRndVec removeObjectAtIndex:rndIndex];
+        }
+        //
         _currentIndex=0;
         //
         if(![self SavePath:_path])
@@ -312,25 +335,36 @@ static VocabularyData *sharedInstance = nil;
     {
         return [(NSNumber*)_checked[arc4random()%[_checked count]] intValue];
     }
+    _CurrentIndexPointer=NULL;
     if (_currentHardIndex<min((double)_HardCountAtLoad,(double)[_hardvec count]))//[_hardvec count]
     {
         int old = _currentHardIndex;
-        _currentHardIndex++;
+        _CurrentIndexPointer=&_currentHardIndex;
         return [(NSNumber*)_hardvec[old] intValue];
     }
     if (_currentIndex<[_midvec count])
     {
-        if (arc4random()%100<10)
+        if (arc4random()%100<10+[_hardvec count] && [_hardvec count]>0)
         {
             return [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
         }
         int old = _currentIndex;
-        _currentIndex++;
-        _doneThisTime++;
+        _CurrentIndexPointer=&_currentIndex;
         return [(NSNumber*)_midvec[old] intValue];
     }
-    return arc4random()%[_data count];
+    if ([_easyVec count]>0)
+    {
+        if (arc4random()%100<10+[_hardvec count] && [_hardvec count]>0)
+        {
+            return [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
+        }
+        return [(NSNumber*)_easyVec[arc4random()%[_easyVec count]] intValue];
+    }
+    if([_data count] > 0)
+        return arc4random()%[_data count];
+    return 0;
 }
+
 -(void)SetRight:(int)index
 {
     if(index<0)
@@ -374,24 +408,7 @@ static VocabularyData *sharedInstance = nil;
         }
     }
     //
-    if(one.tested==false)
-    {
-        one.tested=true;
-        _notTested--;
-    }
-    _easy = [_easyVec count];
-    _hard = [_hardvec count];
-    if (![_checked containsObject:[NSNumber numberWithInt:index]])
-    {
-        [_checked addObject:[NSNumber numberWithInt:index]];
-    }
-    //
-    _SaveCount++;
-    if (_SaveCount>30)
-    {
-        [self SavePath:_path];
-        _SaveCount=0;
-    }
+    [self SetCommonBehavior:one Index:index];
 }
 -(void)SetWrong:(int)index
 {
@@ -436,6 +453,19 @@ static VocabularyData *sharedInstance = nil;
         }
     }
     //
+    [self SetCommonBehavior:one Index:index];
+}
+-(void)SetCommonBehavior:(OneWord*)one Index:(int)index
+{
+    if (_CurrentIndexPointer)
+    {
+        *_CurrentIndexPointer = *_CurrentIndexPointer+1;
+    }
+    if(_currentIndex>=[_midvec count])
+    {
+        _currentIndex=0;
+    }
+    _doneThisTime++;
     if(one.tested==false)
     {
         one.tested=true;
@@ -455,5 +485,4 @@ static VocabularyData *sharedInstance = nil;
         _SaveCount=0;
     }
 }
-
 @end

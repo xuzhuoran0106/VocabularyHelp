@@ -146,14 +146,6 @@
                                     <action selector="ButtonWrong:" destination="8AT-wF-bDM" eventType="touchUpInside" id="Brr-wn-miy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="meaning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yP2-mI-2Go">
-                                <rect key="frame" x="20" y="294" width="280" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="katakana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ETt-eb-SKN">
                                 <rect key="frame" x="20" y="228" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,6 +250,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Meaning" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tCM-HG-nFx">
+                                <rect key="frame" x="20" y="286" width="280" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                     </view>
@@ -281,7 +280,7 @@
                         <outlet property="TextComment" destination="meD-Q9-HVa" id="vFm-Wd-1nu"/>
                         <outlet property="TextDone" destination="jVK-PT-jL8" id="Rzt-tA-ef4"/>
                         <outlet property="TextKanji" destination="eED-YQ-Dq8" id="tXe-gU-qso"/>
-                        <outlet property="TextMeaning" destination="yP2-mI-2Go" id="LKE-im-fQd"/>
+                        <outlet property="TextMeaning" destination="tCM-HG-nFx" id="6dS-kd-2be"/>
                         <outlet property="Textkana" destination="ETt-eb-SKN" id="TRf-NY-aVy"/>
                     </connections>
                 </viewController>
