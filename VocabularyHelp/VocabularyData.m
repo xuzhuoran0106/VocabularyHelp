@@ -32,6 +32,8 @@ static VocabularyData *sharedInstance = nil;
     
     int *_CurrentIndexPointer;
     
+    BOOL _stopHard;
+    
 }
 -(id)init
 {
@@ -58,6 +60,8 @@ static VocabularyData *sharedInstance = nil;
         
         _doneThisTime=0;
         _CurrentIndexPointer=NULL;
+        
+        _stopHard=false;
     }
     
     return self;
@@ -84,6 +88,8 @@ static VocabularyData *sharedInstance = nil;
     
     _doneThisTime=0;
     _CurrentIndexPointer=NULL;
+    
+    _stopHard=false;
 }
 +(VocabularyData *)getSharedInstance
 {
@@ -155,7 +161,20 @@ static VocabularyData *sharedInstance = nil;
             NSNumber* one=[NSNumber numberWithInt:[[NSString stringWithUTF8String:oneNode->value()] intValue]];
             [_hardvec addObject:one];
         }
-        
+        //--random hard set
+        NSMutableArray *oriRndVec=[NSMutableArray array];
+        for(int i=0;i<[_hardvec count];i++)
+        {
+            [oriRndVec addObject:_hardvec[i]];
+        }
+        [_hardvec removeAllObjects];
+        while ([oriRndVec count]!=0)
+        {
+            int rndIndex=arc4random()%[oriRndVec count];
+            [_hardvec addObject:oriRndVec[rndIndex]];
+            [oriRndVec removeObjectAtIndex:rndIndex];
+        }
+        //--
         xml_node<>* nodeCurrentIndex = xmlNet->first_node("currentIndex");
         _currentIndex = [[NSString stringWithUTF8String:nodeCurrentIndex->value()] intValue];
         
@@ -164,6 +183,7 @@ static VocabularyData *sharedInstance = nil;
         [_checked removeAllObjects];
         _HardCountAtLoad=[_hardvec count];
         _doneThisTime=0;
+        _stopHard=false;
     }
     catch(...)
     {
@@ -299,28 +319,7 @@ static VocabularyData *sharedInstance = nil;
             }
         }
         //
-        _total=[_data count];
-         _notTested=_total;
-        _easy=0;
-        _hard=0;
-        //
-        [_easyVec removeAllObjects];
-        [_hardvec removeAllObjects];
-        [_midvec removeAllObjects];
-        //
-        NSMutableArray *oriRndVec=[NSMutableArray array];
-        for(int i=0;i<[_data count];i++)
-        {
-            [oriRndVec addObject:[NSNumber numberWithInt:i]];
-        }
-        while ([oriRndVec count]!=0)
-        {
-            int rndIndex=arc4random()%[oriRndVec count];
-            [_midvec addObject:oriRndVec[rndIndex]];
-            [oriRndVec removeObjectAtIndex:rndIndex];
-        }
-        //
-        _currentIndex=0;
+        [self ResetToinitial];
         //
         if(![self SavePath:_path])
             throw 0;
@@ -331,6 +330,32 @@ static VocabularyData *sharedInstance = nil;
     }
     return true;
 }
+-(void)ResetToinitial
+{
+    _total=[_data count];
+    _notTested=_total;
+    _easy=0;
+    _hard=0;
+    //
+    [_easyVec removeAllObjects];
+    [_hardvec removeAllObjects];
+    [_midvec removeAllObjects];
+    //
+    NSMutableArray *oriRndVec=[NSMutableArray array];
+    for(int i=0;i<[_data count];i++)
+    {
+        [oriRndVec addObject:[NSNumber numberWithInt:i]];
+    }
+    while ([oriRndVec count]!=0)
+    {
+        int rndIndex=arc4random()%[oriRndVec count];
+        [_midvec addObject:oriRndVec[rndIndex]];
+        [oriRndVec removeObjectAtIndex:rndIndex];
+    }
+    //
+    _currentIndex=0;
+
+}
 -(int)GetNextIndex
 {
     if([_path isEqualToString:[NSString stringWithUTF8String:"Not Loaded"]])
@@ -340,7 +365,8 @@ static VocabularyData *sharedInstance = nil;
         return [(NSNumber*)_checked[arc4random()%[_checked count]] intValue];
     }
     _CurrentIndexPointer=NULL;
-    if (_currentHardIndex<min((double)_HardCountAtLoad,(double)[_hardvec count]))//[_hardvec count]
+    //if (_currentHardIndex<min((double)_HardCountAtLoad,(double)[_hardvec count]))//[_hardvec count]
+    if (_currentHardIndex<[_hardvec count] && _stopHard==false)//
     {
         int old = _currentHardIndex;
         _CurrentIndexPointer=&_currentHardIndex;
@@ -430,7 +456,7 @@ static VocabularyData *sharedInstance = nil;
     OneWord *one =  _data[index];
     //
     one.count += 3;
-    one.count = min(15,one.count);
+    one.count = min(13,one.count);
     //
     if (one.count>=11&&![_hardvec containsObject:[NSNumber numberWithInt:index]])
     {
@@ -471,6 +497,10 @@ static VocabularyData *sharedInstance = nil;
     if (_CurrentIndexPointer)
     {
         *_CurrentIndexPointer = *_CurrentIndexPointer+1;
+    }
+    if (_currentHardIndex>=[_hardvec count])
+    {
+        _stopHard = true;
     }
     if(_currentIndex>=[_midvec count])
     {

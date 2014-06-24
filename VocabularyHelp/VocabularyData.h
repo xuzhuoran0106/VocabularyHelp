@@ -20,6 +20,7 @@
 
 
 -(void)Clear;
+-(void)ResetToinitial;
 
 -(int)GetNextIndex;
 -(void)SetRight:(int)index;

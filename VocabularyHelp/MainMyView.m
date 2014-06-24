@@ -18,6 +18,9 @@
 @end
 
 @implementation MainMyView
+{
+    NSString *_alertIndex;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -82,44 +85,82 @@
 {
     UIAlertView* finalCheck = [[UIAlertView alloc]
                                initWithTitle:@"COOK"
-                               message:@"Sure to reset all records?"
+                               message:@"Sure to initial all records?"
                                delegate:self
                                cancelButtonTitle:@"OK"
                                otherButtonTitles:@"Cancel",nil];
+    _alertIndex=@"COOK";
+    [finalCheck show];
+}
+- (IBAction)Clear:(id)sender
+{
+    UIAlertView* finalCheck = [[UIAlertView alloc]
+                               initWithTitle:@"Clear"
+                               message:@"Sure to reset all records to initial?"
+                               delegate:self
+                               cancelButtonTitle:@"OK"
+                               otherButtonTitles:@"Cancel",nil];
+    _alertIndex=@"Clear";
     [finalCheck show];
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if(buttonIndex == 0)//ok
     {
-        for (int i=1; i<=5; i++)
+        if ([_alertIndex isEqualToString:@"COOK"])
         {
-            NSFileManager *manager = [NSFileManager defaultManager];
-            NSString *name=[@"N" stringByAppendingString:[NSString stringWithFormat:@"%d",i]];
-            NSString *topath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@"Record.xml"]];
-            if ([manager fileExistsAtPath:topath])
+            for (int i=1; i<=5; i++)
             {
-                [manager removeItemAtPath:topath error:nil];
+                NSFileManager *manager = [NSFileManager defaultManager];
+                NSString *name=[@"N" stringByAppendingString:[NSString stringWithFormat:@"%d",i]];
+                NSString *topath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@"Record.xml"]];
+                if ([manager fileExistsAtPath:topath])
+                {
+                    [manager removeItemAtPath:topath error:nil];
+                }
+                NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@".txt"]];
+                if (![manager fileExistsAtPath:path])
+                {
+                    path=[[NSBundle mainBundle] pathForResource:name ofType:@"txt" ];
+                }
+                if (![manager fileExistsAtPath:path])
+                {
+                    continue;
+                }
+                VocabularyData *data=[VocabularyData getSharedInstance];
+                [data Clear];
+                [data ConvertPath:path Name:name ToPath:topath];
+                [data Clear];
             }
-            NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@".txt"]];
-            if (![manager fileExistsAtPath:path])
-            {
-                path=[[NSBundle mainBundle] pathForResource:name ofType:@"txt" ];
-            }
-            if (![manager fileExistsAtPath:path])
-            {
-                continue;
-            }
-            VocabularyData *data=[VocabularyData getSharedInstance];
-            [data Clear];
-            [data ConvertPath:path Name:name ToPath:topath];
-            [data Clear];
         }
+        
+        if ([_alertIndex isEqualToString:@"Clear"])
+
+        {
+            for (int i=1; i<=5; i++)
+            {
+                NSFileManager *manager = [NSFileManager defaultManager];
+                NSString *name=[@"N" stringByAppendingString:[NSString stringWithFormat:@"%d",i]];
+                NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@"Record.xml"]];
+                
+                VocabularyData *data=[VocabularyData getSharedInstance];
+                [data Clear];
+                if([data LoadPath:path])
+                {
+                    [data ResetToinitial];
+                    [data SavePath:data.path];
+                }
+                [data Clear];
+            }
+        }
+        
     }
     else if(buttonIndex == 1)//cacel
     {
+        _alertIndex=nil;
         return;
     }
+    _alertIndex=nil;
 }
 
 - (IBAction)unwindToMain:(UIStoryboardSegue *)segue

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "667FB19F1955CA6600C994B6"
-               BuildableName = "VocabularyHelper.app"
-               BlueprintName = "VocabularyHelp copy"
+               BuildableName = "VocabularyHelp copy.app"
+               BlueprintName = "VocabularyHelp Simulate"
                ReferencedContainer = "container:VocabularyHelp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "667FB19F1955CA6600C994B6"
-            BuildableName = "VocabularyHelper.app"
-            BlueprintName = "VocabularyHelp copy"
+            BuildableName = "VocabularyHelp copy.app"
+            BlueprintName = "VocabularyHelp Simulate"
             ReferencedContainer = "container:VocabularyHelp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,8 +52,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "667FB19F1955CA6600C994B6"
-            BuildableName = "VocabularyHelper.app"
-            BlueprintName = "VocabularyHelp copy"
+            BuildableName = "VocabularyHelp copy.app"
+            BlueprintName = "VocabularyHelp Simulate"
             ReferencedContainer = "container:VocabularyHelp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,8 +70,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "667FB19F1955CA6600C994B6"
-            BuildableName = "VocabularyHelper.app"
-            BlueprintName = "VocabularyHelp copy"
+            BuildableName = "VocabularyHelp copy.app"
+            BlueprintName = "VocabularyHelp Simulate"
             ReferencedContainer = "container:VocabularyHelp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
