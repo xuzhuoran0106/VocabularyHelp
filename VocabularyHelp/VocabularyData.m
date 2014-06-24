@@ -358,13 +358,13 @@ static VocabularyData *sharedInstance = nil;
 }
 -(int)GetNextIndex
 {
+    _CurrentIndexPointer=NULL;
     if([_path isEqualToString:[NSString stringWithUTF8String:"Not Loaded"]])
         return -1;
     if ([_checked count]>100)
     {
         return [(NSNumber*)_checked[arc4random()%[_checked count]] intValue];
     }
-    _CurrentIndexPointer=NULL;
     //if (_currentHardIndex<min((double)_HardCountAtLoad,(double)[_hardvec count]))//[_hardvec count]
     if (_currentHardIndex<[_hardvec count] && _stopHard==false)//
     {
