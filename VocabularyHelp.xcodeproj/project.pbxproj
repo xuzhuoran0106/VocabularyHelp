@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		667FB17C1951DB0900C994B6 /* N2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 667FB17A1951DB0900C994B6 /* N2.txt */; };
 		667FB18B1952FC0300C994B6 /* OneWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 667FB18A1952FC0300C994B6 /* OneWord.m */; };
 		667FB18E1952FCFE00C994B6 /* VocabularyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 667FB18D1952FCFE00C994B6 /* VocabularyData.m */; };
 		667FB1941955C52300C994B6 /* icon_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1911955C52300C994B6 /* icon_76.png */; };
@@ -29,7 +28,6 @@
 		667FB1AC1955CA6600C994B6 /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB19A1955C83E00C994B6 /* icon_80.png */; };
 		667FB1AD1955CA6600C994B6 /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1921955C52300C994B6 /* icon_120.png */; };
 		667FB1AE1955CA6600C994B6 /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1971955C83E00C994B6 /* icon_29.png */; };
-		667FB1AF1955CA6600C994B6 /* N2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 667FB17A1951DB0900C994B6 /* N2.txt */; };
 		667FB1B01955CA6600C994B6 /* icon_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1911955C52300C994B6 /* icon_76.png */; };
 		667FB1B11955CA6600C994B6 /* icon_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1981955C83E00C994B6 /* icon_40.png */; };
 		667FB1B21955CA6600C994B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66CF36371951765600C2F004 /* InfoPlist.strings */; };
@@ -37,6 +35,10 @@
 		667FB1B41955CA6600C994B6 /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1991955C83E00C994B6 /* icon_58.png */; };
 		667FB1B51955CA6600C994B6 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CF365D195176FE00C2F004 /* main.storyboard */; };
 		667FB1B61955CA6600C994B6 /* icon_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 667FB1931955C52300C994B6 /* icon_152.png */; };
+		66B526FD1962BA2E004675F6 /* MainMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B526FC1962BA2E004675F6 /* MainMyTableViewController.m */; };
+		66B526FE1962BA2E004675F6 /* MainMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B526FC1962BA2E004675F6 /* MainMyTableViewController.m */; };
+		66B527071962D696004675F6 /* InsertNewVocMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B527061962D696004675F6 /* InsertNewVocMyTableViewController.m */; };
+		66B527091962D758004675F6 /* InsertNewVocMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B527061962D696004675F6 /* InsertNewVocMyTableViewController.m */; };
 		66CF362F1951765600C2F004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF362E1951765600C2F004 /* Foundation.framework */; };
 		66CF36311951765600C2F004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36301951765600C2F004 /* CoreGraphics.framework */; };
 		66CF36331951765600C2F004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36321951765600C2F004 /* UIKit.framework */; };
@@ -65,7 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		667FB17A1951DB0900C994B6 /* N2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = N2.txt; sourceTree = "<group>"; };
 		667FB1831952C9B800C994B6 /* rapidxml_iterators.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_iterators.hpp; path = VocabularyHelp/rapidxml_iterators.hpp; sourceTree = "<group>"; };
 		667FB1841952C9B800C994B6 /* rapidxml_print.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_print.hpp; path = VocabularyHelp/rapidxml_print.hpp; sourceTree = "<group>"; };
 		667FB1851952C9B800C994B6 /* rapidxml_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_utils.hpp; path = VocabularyHelp/rapidxml_utils.hpp; sourceTree = "<group>"; };
@@ -83,6 +84,10 @@
 		667FB19A1955C83E00C994B6 /* icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80.png; sourceTree = "<group>"; };
 		667FB1BA1955CA6600C994B6 /* VocabularyHelp copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VocabularyHelp copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		667FB1BB1955CA6600C994B6 /* VocabularyHelp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VocabularyHelp copy-Info.plist"; path = "/Users/xuzhuoran/Documents/VocabularyHelp/VocabularyHelp copy-Info.plist"; sourceTree = "<absolute>"; };
+		66B526FB1962BA2E004675F6 /* MainMyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMyTableViewController.h; sourceTree = "<group>"; };
+		66B526FC1962BA2E004675F6 /* MainMyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMyTableViewController.m; sourceTree = "<group>"; };
+		66B527051962D696004675F6 /* InsertNewVocMyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertNewVocMyTableViewController.h; sourceTree = "<group>"; };
+		66B527061962D696004675F6 /* InsertNewVocMyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertNewVocMyTableViewController.m; sourceTree = "<group>"; };
 		66CF362B1951765600C2F004 /* VocabularyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF362E1951765600C2F004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66CF36301951765600C2F004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,7 +148,6 @@
 		667FB1791951DB0900C994B6 /* Vocabulary */ = {
 			isa = PBXGroup;
 			children = (
-				667FB17A1951DB0900C994B6 /* N2.txt */,
 			);
 			path = Vocabulary;
 			sourceTree = "<group>";
@@ -216,6 +220,10 @@
 				66CF36351951765600C2F004 /* Supporting Files */,
 				66CF36F31951875200C2F004 /* VocabularyMyView.h */,
 				66CF36F41951875200C2F004 /* VocabularyMyView.m */,
+				66B526FB1962BA2E004675F6 /* MainMyTableViewController.h */,
+				66B526FC1962BA2E004675F6 /* MainMyTableViewController.m */,
+				66B527051962D696004675F6 /* InsertNewVocMyTableViewController.h */,
+				66B527061962D696004675F6 /* InsertNewVocMyTableViewController.m */,
 			);
 			path = VocabularyHelp;
 			sourceTree = "<group>";
@@ -345,7 +353,6 @@
 				667FB1AC1955CA6600C994B6 /* icon_80.png in Resources */,
 				667FB1AD1955CA6600C994B6 /* icon_120.png in Resources */,
 				667FB1AE1955CA6600C994B6 /* icon_29.png in Resources */,
-				667FB1AF1955CA6600C994B6 /* N2.txt in Resources */,
 				667FB1B01955CA6600C994B6 /* icon_76.png in Resources */,
 				667FB1B11955CA6600C994B6 /* icon_40.png in Resources */,
 				667FB1B21955CA6600C994B6 /* InfoPlist.strings in Resources */,
@@ -363,7 +370,6 @@
 				667FB19E1955C83E00C994B6 /* icon_80.png in Resources */,
 				667FB1951955C52300C994B6 /* icon_120.png in Resources */,
 				667FB19B1955C83E00C994B6 /* icon_29.png in Resources */,
-				667FB17C1951DB0900C994B6 /* N2.txt in Resources */,
 				667FB1941955C52300C994B6 /* icon_76.png in Resources */,
 				667FB19C1955C83E00C994B6 /* icon_40.png in Resources */,
 				66CF36391951765600C2F004 /* InfoPlist.strings in Resources */,
@@ -391,8 +397,10 @@
 			files = (
 				667FB1A11955CA6600C994B6 /* MainMyView.m in Sources */,
 				667FB1A21955CA6600C994B6 /* OneWord.m in Sources */,
+				66B527091962D758004675F6 /* InsertNewVocMyTableViewController.m in Sources */,
 				667FB1A31955CA6600C994B6 /* AppDelegate.m in Sources */,
 				667FB1A41955CA6600C994B6 /* VocabularyData.m in Sources */,
+				66B526FE1962BA2E004675F6 /* MainMyTableViewController.m in Sources */,
 				667FB1A51955CA6600C994B6 /* VocabularyMyView.m in Sources */,
 				667FB1A61955CA6600C994B6 /* main.m in Sources */,
 			);
@@ -404,8 +412,10 @@
 			files = (
 				66CF36F21951873900C2F004 /* MainMyView.m in Sources */,
 				667FB18B1952FC0300C994B6 /* OneWord.m in Sources */,
+				66B527071962D696004675F6 /* InsertNewVocMyTableViewController.m in Sources */,
 				66CF363F1951765600C2F004 /* AppDelegate.m in Sources */,
 				667FB18E1952FCFE00C994B6 /* VocabularyData.m in Sources */,
+				66B526FD1962BA2E004675F6 /* MainMyTableViewController.m in Sources */,
 				66CF36F51951875200C2F004 /* VocabularyMyView.m in Sources */,
 				66CF363B1951765600C2F004 /* main.m in Sources */,
 			);

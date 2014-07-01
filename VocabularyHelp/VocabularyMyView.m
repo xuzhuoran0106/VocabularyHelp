@@ -90,7 +90,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (IBAction)clearButton:(id)sender
+{
+    VocabularyData *data=[VocabularyData getSharedInstance];
+    if([data.path isEqual:@"Not Loaded"])
+    {
+        return;
+    }
+    UIAlertView* finalCheck = [[UIAlertView alloc]
+                               initWithTitle:@"Clear"
+                               message:@"Sure to reset all records to initial?"
+                               delegate:self
+                               cancelButtonTitle:@"OK"
+                               otherButtonTitles:@"Cancel",nil];
+    [finalCheck show];
+}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0)//ok
+    {
+        VocabularyData *data=[VocabularyData getSharedInstance];
+        [data ResetToinitial];
+        [data SavePath:data.path];
+        [self LoadNext];
+    }
+    else if(buttonIndex == 1)//cacel
+    {
+        return;
+    }
+}
 -(void)LoadNext
 {
     VocabularyData *data=[VocabularyData getSharedInstance];

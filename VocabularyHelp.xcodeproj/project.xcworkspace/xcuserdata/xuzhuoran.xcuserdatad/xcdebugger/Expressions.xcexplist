@@ -14,24 +14,32 @@
          contextName = "-[MainMyView prepareForSegue:sender:]:MainMyView.m">
       </ContextState>
       <ContextState
-         contextName = "-[VocabularyData SavePath:]:VocabularyData.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "tmpPath">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[MainMyView alertView:didDismissWithButtonIndex:]:MainMyView.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[VocabularyData LoadPath:]:VocabularyData.m">
       </ContextState>
       <ContextState
          contextName = "-[VocabularyData ConvertPath:Name:ToPath:]:VocabularyData.m">
          <PersistentStrings>
             <PersistentString
                value = "_data">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainMyTableViewController unwindToMainTable:]:MainMyTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_addNewName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[VocabularyData LoadPath:]:VocabularyData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[VocabularyData SavePath:]:VocabularyData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tmpPath">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

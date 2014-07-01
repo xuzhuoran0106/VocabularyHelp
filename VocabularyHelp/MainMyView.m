@@ -119,10 +119,10 @@
                     [manager removeItemAtPath:topath error:nil];
                 }
                 NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@".txt"]];
-                if (![manager fileExistsAtPath:path])
-                {
-                    path=[[NSBundle mainBundle] pathForResource:name ofType:@"txt" ];
-                }
+//                if (![manager fileExistsAtPath:path])
+//                {
+//                    path=[[NSBundle mainBundle] pathForResource:name ofType:@"txt" ];
+//                }
                 if (![manager fileExistsAtPath:path])
                 {
                     continue;
