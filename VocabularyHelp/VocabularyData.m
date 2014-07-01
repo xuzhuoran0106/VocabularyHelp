@@ -30,6 +30,9 @@ static VocabularyData *sharedInstance = nil;
     
     NSMutableArray* _checked;
     
+    NSMutableArray* _lastChecked;
+    int _lastCheckedLimit;
+    
     int *_CurrentIndexPointer;
     
     BOOL _stopHard;
@@ -62,6 +65,10 @@ static VocabularyData *sharedInstance = nil;
         _CurrentIndexPointer=NULL;
         
         _stopHard=false;
+        
+        _lastChecked=[NSMutableArray array];
+        _lastCheckedLimit=5;
+
     }
     
     return self;
@@ -90,6 +97,10 @@ static VocabularyData *sharedInstance = nil;
     _CurrentIndexPointer=NULL;
     
     _stopHard=false;
+    
+    [_lastChecked removeAllObjects];
+    _lastCheckedLimit=5;
+
 }
 +(VocabularyData *)getSharedInstance
 {
@@ -184,6 +195,7 @@ static VocabularyData *sharedInstance = nil;
         _HardCountAtLoad=[_hardvec count];
         _doneThisTime=0;
         _stopHard=false;
+        [_lastChecked removeAllObjects];
     }
     catch(...)
     {
@@ -345,6 +357,9 @@ static VocabularyData *sharedInstance = nil;
     for(int i=0;i<[_data count];i++)
     {
         [oriRndVec addObject:[NSNumber numberWithInt:i]];
+        OneWord *one= _data[i];
+        one.count=10;
+        one.tested = false;
     }
     while ([oriRndVec count]!=0)
     {
@@ -361,6 +376,7 @@ static VocabularyData *sharedInstance = nil;
     _CurrentIndexPointer=NULL;
     if([_path isEqualToString:[NSString stringWithUTF8String:"Not Loaded"]])
         return -1;
+    
     if ([_checked count]>100)
     {
         return [(NSNumber*)_checked[arc4random()%[_checked count]] intValue];
@@ -372,29 +388,55 @@ static VocabularyData *sharedInstance = nil;
         _CurrentIndexPointer=&_currentHardIndex;
         return [(NSNumber*)_hardvec[old] intValue];
     }
+    
     if (_currentIndex<[_midvec count])
     {
         if (arc4random()%100<10+[_hardvec count] && [_hardvec count]>0)
         {
-            return [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
+            int resIndex= [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
+            
+            if (![_lastChecked containsObject:[NSNumber numberWithInt:resIndex]])
+            {
+                return resIndex;
+            }
         }
-        int old = _currentIndex;
-        _CurrentIndexPointer=&_currentIndex;
-        return [(NSNumber*)_midvec[old] intValue];
-    }
-    if ([_midvec count]==0 && [_hardvec count]>0)
-    {
-        if (arc4random()%100<40+[_hardvec count] && [_hardvec count]>0)
+        
+        for(int i=0;i<_lastCheckedLimit;i++)
         {
-            return [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
+            int old = _currentIndex;
+            _CurrentIndexPointer=&_currentIndex;
+            int resIndex= [(NSNumber*)_midvec[old] intValue];
+            
+            if (![_lastChecked containsObject:[NSNumber numberWithInt:resIndex]])
+            {
+                return resIndex;
+            }
+            _currentIndex++;
+            if(_currentIndex>=[_midvec count])
+            {
+                _currentIndex=0;
+            }
         }
     }
+//    else if ([_midvec count]==0 && [_hardvec count]>0)
+//    {
+//        if (arc4random()%100<40+[_hardvec count] && [_hardvec count]>0)
+//        {
+//            resIndex= [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
+//        }
+//    }
     if ([_easyVec count]>0)
     {
         if (arc4random()%100<10+[_hardvec count] && [_hardvec count]>0)
         {
-            return [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
+            int resIndex= [(NSNumber*)_hardvec[arc4random()%[_hardvec count]] intValue];
+            
+            if (![_lastChecked containsObject:[NSNumber numberWithInt:resIndex]])
+            {
+                return resIndex;
+            }
         }
+
         return [(NSNumber*)_easyVec[arc4random()%[_easyVec count]] intValue];
     }
     if([_data count] > 0)
@@ -513,6 +555,12 @@ static VocabularyData *sharedInstance = nil;
     }
     _easy = [_easyVec count];
     _hard = [_hardvec count];
+    //
+    [_lastChecked addObject:[NSNumber numberWithInt:index]];
+    if ([_lastChecked count]>_lastCheckedLimit)
+    {
+        [_lastChecked removeObjectAtIndex:0];
+    }
     if (![_checked containsObject:[NSNumber numberWithInt:index]])
     {
         [_checked addObject:[NSNumber numberWithInt:index]];
