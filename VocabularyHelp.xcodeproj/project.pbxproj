@@ -39,6 +39,12 @@
 		66B526FE1962BA2E004675F6 /* MainMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B526FC1962BA2E004675F6 /* MainMyTableViewController.m */; };
 		66B527071962D696004675F6 /* InsertNewVocMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B527061962D696004675F6 /* InsertNewVocMyTableViewController.m */; };
 		66B527091962D758004675F6 /* InsertNewVocMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B527061962D696004675F6 /* InsertNewVocMyTableViewController.m */; };
+		66B5270C1966B9FA004675F6 /* ManageMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B5270B1966B9FA004675F6 /* ManageMyTableViewController.m */; };
+		66B5270D1966B9FA004675F6 /* ManageMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B5270B1966B9FA004675F6 /* ManageMyTableViewController.m */; };
+		66B527101966CC69004675F6 /* VocabularyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B5270F1966CC68004675F6 /* VocabularyDetailViewController.m */; };
+		66B527111966CC69004675F6 /* VocabularyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B5270F1966CC68004675F6 /* VocabularyDetailViewController.m */; };
+		66B527181966D5B0004675F6 /* WatchingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B527171966D5B0004675F6 /* WatchingListTableViewController.m */; };
+		66B527191966D5B0004675F6 /* WatchingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B527171966D5B0004675F6 /* WatchingListTableViewController.m */; };
 		66CF362F1951765600C2F004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF362E1951765600C2F004 /* Foundation.framework */; };
 		66CF36311951765600C2F004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36301951765600C2F004 /* CoreGraphics.framework */; };
 		66CF36331951765600C2F004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36321951765600C2F004 /* UIKit.framework */; };
@@ -88,6 +94,12 @@
 		66B526FC1962BA2E004675F6 /* MainMyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMyTableViewController.m; sourceTree = "<group>"; };
 		66B527051962D696004675F6 /* InsertNewVocMyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertNewVocMyTableViewController.h; sourceTree = "<group>"; };
 		66B527061962D696004675F6 /* InsertNewVocMyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertNewVocMyTableViewController.m; sourceTree = "<group>"; };
+		66B5270A1966B9FA004675F6 /* ManageMyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageMyTableViewController.h; sourceTree = "<group>"; };
+		66B5270B1966B9FA004675F6 /* ManageMyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageMyTableViewController.m; sourceTree = "<group>"; };
+		66B5270E1966CC68004675F6 /* VocabularyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabularyDetailViewController.h; sourceTree = "<group>"; };
+		66B5270F1966CC68004675F6 /* VocabularyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabularyDetailViewController.m; sourceTree = "<group>"; };
+		66B527161966D5B0004675F6 /* WatchingListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchingListTableViewController.h; sourceTree = "<group>"; };
+		66B527171966D5B0004675F6 /* WatchingListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchingListTableViewController.m; sourceTree = "<group>"; };
 		66CF362B1951765600C2F004 /* VocabularyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF362E1951765600C2F004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66CF36301951765600C2F004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -224,6 +236,12 @@
 				66B526FC1962BA2E004675F6 /* MainMyTableViewController.m */,
 				66B527051962D696004675F6 /* InsertNewVocMyTableViewController.h */,
 				66B527061962D696004675F6 /* InsertNewVocMyTableViewController.m */,
+				66B5270A1966B9FA004675F6 /* ManageMyTableViewController.h */,
+				66B5270B1966B9FA004675F6 /* ManageMyTableViewController.m */,
+				66B5270E1966CC68004675F6 /* VocabularyDetailViewController.h */,
+				66B5270F1966CC68004675F6 /* VocabularyDetailViewController.m */,
+				66B527161966D5B0004675F6 /* WatchingListTableViewController.h */,
+				66B527171966D5B0004675F6 /* WatchingListTableViewController.m */,
 			);
 			path = VocabularyHelp;
 			sourceTree = "<group>";
@@ -397,12 +415,15 @@
 			files = (
 				667FB1A11955CA6600C994B6 /* MainMyView.m in Sources */,
 				667FB1A21955CA6600C994B6 /* OneWord.m in Sources */,
+				66B527111966CC69004675F6 /* VocabularyDetailViewController.m in Sources */,
 				66B527091962D758004675F6 /* InsertNewVocMyTableViewController.m in Sources */,
+				66B527191966D5B0004675F6 /* WatchingListTableViewController.m in Sources */,
 				667FB1A31955CA6600C994B6 /* AppDelegate.m in Sources */,
 				667FB1A41955CA6600C994B6 /* VocabularyData.m in Sources */,
 				66B526FE1962BA2E004675F6 /* MainMyTableViewController.m in Sources */,
 				667FB1A51955CA6600C994B6 /* VocabularyMyView.m in Sources */,
 				667FB1A61955CA6600C994B6 /* main.m in Sources */,
+				66B5270D1966B9FA004675F6 /* ManageMyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,12 +433,15 @@
 			files = (
 				66CF36F21951873900C2F004 /* MainMyView.m in Sources */,
 				667FB18B1952FC0300C994B6 /* OneWord.m in Sources */,
+				66B527101966CC69004675F6 /* VocabularyDetailViewController.m in Sources */,
 				66B527071962D696004675F6 /* InsertNewVocMyTableViewController.m in Sources */,
+				66B527181966D5B0004675F6 /* WatchingListTableViewController.m in Sources */,
 				66CF363F1951765600C2F004 /* AppDelegate.m in Sources */,
 				667FB18E1952FCFE00C994B6 /* VocabularyData.m in Sources */,
 				66B526FD1962BA2E004675F6 /* MainMyTableViewController.m in Sources */,
 				66CF36F51951875200C2F004 /* VocabularyMyView.m in Sources */,
 				66CF363B1951765600C2F004 /* main.m in Sources */,
+				66B5270C1966B9FA004675F6 /* ManageMyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *ButtonDone;
 @property (weak, nonatomic) IBOutlet UILabel *TextDone;
 @property (weak, nonatomic) IBOutlet UILabel *NumDone;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *ButtonToWatchingList;
 
 @end
 
@@ -90,35 +91,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)clearButton:(id)sender
-{
-    VocabularyData *data=[VocabularyData getSharedInstance];
-    if([data.path isEqual:@"Not Loaded"])
-    {
-        return;
-    }
-    UIAlertView* finalCheck = [[UIAlertView alloc]
-                               initWithTitle:@"Clear"
-                               message:@"Sure to reset all records to initial?"
-                               delegate:self
-                               cancelButtonTitle:@"OK"
-                               otherButtonTitles:@"Cancel",nil];
-    [finalCheck show];
-}
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    if(buttonIndex == 0)//ok
-    {
-        VocabularyData *data=[VocabularyData getSharedInstance];
-        [data ResetToinitial];
-        [data SavePath:data.path];
-        [self LoadNext];
-    }
-    else if(buttonIndex == 1)//cacel
-    {
-        return;
-    }
-}
+//- (IBAction)clearButton:(id)sender
+//{
+//    VocabularyData *data=[VocabularyData getSharedInstance];
+//    if([data.path isEqual:@"Not Loaded"])
+//    {
+//        return;
+//    }
+//    UIAlertView* finalCheck = [[UIAlertView alloc]
+//                               initWithTitle:@"Clear"
+//                               message:@"Sure to reset all records to initial?"
+//                               delegate:self
+//                               cancelButtonTitle:@"OK"
+//                               otherButtonTitles:@"Cancel",nil];
+//    [finalCheck show];
+//}
+//- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+//{
+//    if(buttonIndex == 0)//ok
+//    {
+//        VocabularyData *data=[VocabularyData getSharedInstance];
+//        [data ResetToinitial];
+//        [data SavePath:data.path];
+//        [self LoadNext];
+//    }
+//    else if(buttonIndex == 1)//cacel
+//    {
+//        return;
+//    }
+//}
 -(void)LoadNext
 {
     VocabularyData *data=[VocabularyData getSharedInstance];
@@ -132,12 +133,14 @@
     _ButtonRight.enabled=false;
     _ButtonWrong.enabled=false;
     _ButtonCheckAnswer.enabled=true;
+    _ButtonToWatchingList.enabled =false;
     
     if (index<0)
     {
         _ButtonRight.enabled=false;
         _ButtonWrong.enabled=false;
         _ButtonCheckAnswer.enabled=false;
+        _ButtonToWatchingList.enabled =false;
         
         _TextKanji.text=@"";
         _Textkana.text=@"";
@@ -180,22 +183,29 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIApplicationWillResignActiveNotification
-                                                  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIApplicationWillTerminateNotification
-                                                  object:nil];
-
-    //save something
-    if (_CurrentIndex<0)
+    if ([[segue identifier] isEqualToString:@"towatchinglist"])
     {
-        return;
     }
-    VocabularyData *data=[VocabularyData getSharedInstance];
-    [data SavePath:data.path];
-    [data Clear];
+    else
+    {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UIApplicationWillResignActiveNotification
+                                                      object:nil];
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UIApplicationWillTerminateNotification
+                                                      object:nil];
+        
+        //save something
+        if (_CurrentIndex<0)
+        {
+            return;
+        }
+        VocabularyData *data=[VocabularyData getSharedInstance];
+        [data SavePath:data.path];
+        [data Clear];
+    }
+    
 }
 //////////////////////////////////////////////////////////////////////////////////
 - (IBAction)ButtonCheckAnswer:(id)sender
@@ -203,10 +213,11 @@
     _ButtonRight.enabled=true;
     _ButtonWrong.enabled=true;
     _ButtonCheckAnswer.enabled=false;
+    _ButtonToWatchingList.enabled =true;
     
     _TextComment.editable=true;
     _TextComment.selectable=true;
-    _ButtonDone.enabled=true;
+    _ButtonDone.enabled=false;
     
     if (_CurrentIndex<0)
     {
@@ -228,6 +239,7 @@
     _ButtonRight.enabled=false;
     _ButtonWrong.enabled=false;
     _ButtonCheckAnswer.enabled=true;
+    _ButtonToWatchingList.enabled =false;
     
     if (_CurrentIndex<0)
     {
@@ -249,6 +261,7 @@
     _ButtonRight.enabled=false;
     _ButtonWrong.enabled=false;
     _ButtonCheckAnswer.enabled=true;
+    _ButtonToWatchingList.enabled =false;
     
     if (_CurrentIndex<0)
     {
@@ -300,6 +313,9 @@
     _ButtonRight.enabled=false;
     _ButtonWrong.enabled=false;
     _ButtonCheckAnswer.enabled=false;
+    _ButtonToWatchingList.enabled =false;
+    
+    _ButtonDone.enabled=true;
 }
 
 -(void)keyboardWillHide
@@ -319,6 +335,9 @@
     _ButtonRight.enabled=true;
     _ButtonWrong.enabled=true;
     _ButtonCheckAnswer.enabled=false;
+    _ButtonToWatchingList.enabled =true;
+    
+    _ButtonDone.enabled=false;
 }
 
 //method to move the view up/down whenever the keyboard is shown/dismissed
@@ -374,5 +393,9 @@
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
 }
-
+- (IBAction)unwindToVocabularyView:(UIStoryboardSegue *)segue
+{
+    UIViewController* sourceViewController = segue.sourceViewController;
+    
+}
 @end

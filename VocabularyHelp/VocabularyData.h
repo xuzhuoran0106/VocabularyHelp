@@ -10,6 +10,7 @@
 
 @interface VocabularyData : NSObject
 @property (copy)NSMutableArray* data;
+@property (copy)NSMutableArray* watchingList;
 @property int total;
 @property int notTested;
 @property int easy;
@@ -17,6 +18,8 @@
 @property (copy) NSString *path;
 @property (copy) NSString *level;
 @property int doneThisTime;
+
+@property int currentIndex;
 
 
 -(void)Clear;
@@ -29,6 +32,8 @@
 -(bool)LoadPath:(NSString*)path;
 -(bool)SavePath:(NSString*)path;
 -(bool)ConvertPath:(NSString*)path Name:(NSString*)name ToPath:(NSString *)topath;
+
+-(bool)AddToWatchingList:(int)index;
 
 +(VocabularyData *)getSharedInstance;
 @end

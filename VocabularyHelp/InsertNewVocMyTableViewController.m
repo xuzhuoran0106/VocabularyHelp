@@ -7,7 +7,8 @@
 //
 
 #import "InsertNewVocMyTableViewController.h"
-#import "MainMyTableViewController.h"
+//#import "MainMyTableViewController.h"
+#import "ManageMyTableViewController.h"
 
 @interface InsertNewVocMyTableViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *returnButton;
@@ -153,7 +154,7 @@
             UITableViewCell *cell = sender;
             name = cell.textLabel.text;
         }
-        MainMyTableViewController* ctr=[segue destinationViewController];
+        ManageMyTableViewController* ctr=[segue destinationViewController];
         [ctr nameOfNewSet:name];
         
         

@@ -1,23 +1,24 @@
 //
-//  MainMyTableViewController.m
+//  ManageMyTableViewController.m
 //  VocabularyHelp
 //
-//  Created by xu zhuoran on 7/1/14.
+//  Created by xu zhuoran on 7/4/14.
 //  Copyright (c) 2014 xu zhuoran. All rights reserved.
 //
 
-#import "MainMyTableViewController.h"
-#import "VocabularyData.h"
+#import "ManageMyTableViewController.h"
 #import "InsertNewVocMyTableViewController.h"
+#import "VocabularyData.h"
 
-@interface MainMyTableViewController ()
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
+@interface ManageMyTableViewController ()
 
 @end
 
-@implementation MainMyTableViewController
+@implementation ManageMyTableViewController
 {
     NSMutableArray *_objects;
+    BOOL _messageBoxRes;
+    NSString *_addNewName;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -44,7 +45,10 @@
         _objects = [[NSMutableArray alloc] init];
     }
     
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
     //[self reload];
+
 }
 -(void)reload
 {
@@ -76,7 +80,6 @@
         }
     }
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -107,7 +110,9 @@
     NSString *str = _objects[indexPath.row];
     cell.textLabel.text = str;
     return cell;
+
 }
+
 
 
 // Override to support conditional editing of the table view.
@@ -125,12 +130,18 @@
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         // Delete the row from the data source
+        NSString *name = _objects[indexPath.row];
+        [_objects removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        NSFileManager *manager = [NSFileManager defaultManager];
+        NSString* xmlpath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@"Record.xml"]];
+        [manager removeItemAtPath:xmlpath error:nil];
         
     } else if (editingStyle == UITableViewCellEditingStyleInsert)
     {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         
-    }   
+    }
 }
 
 
@@ -159,7 +170,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    if ([[segue identifier] isEqualToString:@"tovoc"])
+    
+    if ([[segue identifier] isEqualToString:@"todetail"])
     {
         VocabularyData *data=[VocabularyData getSharedInstance];
         NSString *xmlpath=NULL;
@@ -174,30 +186,82 @@
             [data Clear];
         }
     }
-    
 }
-- (IBAction)unwindToMainTable:(UIStoryboardSegue *)segue
+
+- (IBAction)unwindToManageTable:(UIStoryboardSegue *)segue
 {
     UIViewController* sourceViewController = segue.sourceViewController;
     
+    if ([sourceViewController isKindOfClass:[InsertNewVocMyTableViewController class]])
+    {
+        NSFileManager *manager = [NSFileManager defaultManager];
+        NSString *topath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[_addNewName stringByAppendingString:@"Record.xml"]];
+        if ([manager fileExistsAtPath:topath])
+        {
+            _messageBoxRes = false;
+            UIAlertView* finalCheck = [[UIAlertView alloc]
+                                       initWithTitle:@"replace"
+                                       message:@"replace?"
+                                       delegate:self
+                                       cancelButtonTitle:@"OK"
+                                       otherButtonTitles:@"Cancel",nil];
+            //这个函数是异步的会立马返回，所以处理应该放在回调函数中。
+            [finalCheck show];
+        }
+        else
+        {
+            [self addNew:_addNewName];
+            //[self reload];
+        }
+    }
 }
-//- (IBAction)testbutton:(id)sender
-//{
-//    UIActionSheet *actionSheet = [[UIActionSheet alloc]
-//                                  initWithTitle:@"replace"
-//                                  delegate:self
-//                                  cancelButtonTitle:@"Cancel"
-//                                  destructiveButtonTitle:@"Ok"
-//                                  otherButtonTitles:nil];
-//    actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
-//    [actionSheet showInView:self.view];
-//
-//}
+- (void)addNew:(NSString*)name
+{
+    if ([name isEqual:@""])
+    {
+        return;
+    }
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    //NSString *name=[@"N" stringByAppendingString:[NSString stringWithFormat:@"%d",i]];
+    NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@".txt"]];
+    if (![manager fileExistsAtPath:path])
+    {
+        return;
+    }
+    
+    NSString *topath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[name stringByAppendingString:@"Record.xml"]];
+    
+    VocabularyData *data=[VocabularyData getSharedInstance];
+    [data Clear];
+    [data ConvertPath:path Name:name ToPath:topath];
+    [data Clear];
+}
+- (void)nameOfNewSet:(id)newone
+{
+    _addNewName = newone;
+}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0)//ok
+    {
+        _messageBoxRes=true;
+        [self addNew:_addNewName];
+        //[self reload];
+    }
+    else if(buttonIndex == 1)//cacel
+    {
+        _messageBoxRes=false;
+    }
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     // register for keyboard notifications
     [self reload];
     
 }
+
 @end

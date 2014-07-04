@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MainMyTableViewController : UITableViewController<UIActionSheetDelegate>
-- (void)nameOfNewSet:(id)newone;
+//- (void)nameOfNewSet:(id)newone;
 @end
