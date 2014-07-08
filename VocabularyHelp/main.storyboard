@@ -291,10 +291,10 @@
             </objects>
             <point key="canvasLocation" x="1451" y="663"/>
         </scene>
-        <!--View Controller - How to use-->
+        <!--How To Use View Controller - How to use-->
         <scene sceneID="3Td-eY-egS">
             <objects>
-                <viewController id="yZb-dI-JC7" sceneMemberID="viewController">
+                <viewController id="yZb-dI-JC7" customClass="HowToUseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gnA-aQ-S5y"/>
                         <viewControllerLayoutGuide type="bottom" id="HDE-fg-05T"/>
@@ -303,16 +303,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to use" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVt-bp-ESR">
-                                <rect key="frame" x="105" y="194" width="230" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n58-9T-NxN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="How to use" id="bhV-wM-ta4"/>
+                    <connections>
+                        <outlet property="howToUseView" destination="n58-9T-NxN" id="wtR-fc-Mr0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTT-FW-VEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,7 +325,7 @@
         <scene sceneID="trn-p2-enA">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="luP-Td-aOz" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="H2m-0c-bA2">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

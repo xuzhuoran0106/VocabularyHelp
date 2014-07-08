@@ -52,15 +52,16 @@
 }
 -(void)reload
 {
-    while([_objects count]!=0)
-    {
-        NSString *tmp=_objects[0];
-        [_objects removeObjectAtIndex:0];
-        [self.tableView beginUpdates];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [self.tableView endUpdates];
-    }
+//    while([_objects count]!=0)
+//    {
+//        NSString *tmp=_objects[0];
+//        [_objects removeObjectAtIndex:0];
+//        [self.tableView beginUpdates];
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        [self.tableView endUpdates];
+//    }
+    NSMutableArray *tmpArray = [NSMutableArray array];
     NSFileManager *manager = [NSFileManager defaultManager];
     NSString *dirpath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     NSArray * dir = [manager contentsOfDirectoryAtPath:dirpath error:nil];
@@ -69,15 +70,42 @@
         if([one hasSuffix:@"Record.xml"])
         {
             NSString* name=[one substringToIndex:[one length]-10];
-            if (![_objects containsObject:name])
-            {
-                [_objects addObject:name];
-                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[_objects indexOfObject:name] inSection:0];
-                //[self.tableView beginUpdates];
-                [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-                //[self.tableView endUpdates];
-            }
+            [tmpArray addObject:name];
+//            if (![_objects containsObject:name])
+//            {
+//                [_objects addObject:name];
+//                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[_objects indexOfObject:name] inSection:0];
+//                //[self.tableView beginUpdates];
+//                [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//                //[self.tableView endUpdates];
+//            }
         }
+    }
+    for (NSString*one in tmpArray)
+    {
+        if (![_objects containsObject:one])
+        {
+            [_objects addObject:one];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[_objects indexOfObject:one] inSection:0];
+            [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            
+        }
+    }
+    NSMutableArray *delArray = [NSMutableArray array];
+    for (NSString*one in _objects)
+    {
+        if (![tmpArray containsObject:one])
+        {
+            [delArray addObject:one];
+        }
+    }
+    for (NSString *one in delArray)
+    {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[_objects indexOfObject:one] inSection:0];
+        [_objects removeObject:one];
+        [self.tableView beginUpdates];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView endUpdates];
     }
 }
 - (void)didReceiveMemoryWarning

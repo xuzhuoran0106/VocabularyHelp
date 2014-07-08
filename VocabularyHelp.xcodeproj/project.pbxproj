@@ -45,6 +45,10 @@
 		66B527111966CC69004675F6 /* VocabularyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B5270F1966CC68004675F6 /* VocabularyDetailViewController.m */; };
 		66B527181966D5B0004675F6 /* WatchingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B527171966D5B0004675F6 /* WatchingListTableViewController.m */; };
 		66B527191966D5B0004675F6 /* WatchingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B527171966D5B0004675F6 /* WatchingListTableViewController.m */; };
+		66B5271B196BC46B004675F6 /* HowToUse.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66B5271A196BC46B004675F6 /* HowToUse.rtf */; };
+		66B5271C196BC46B004675F6 /* HowToUse.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66B5271A196BC46B004675F6 /* HowToUse.rtf */; };
+		66B5271F196BC533004675F6 /* HowToUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B5271E196BC533004675F6 /* HowToUseViewController.m */; };
+		66B52720196BC533004675F6 /* HowToUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B5271E196BC533004675F6 /* HowToUseViewController.m */; };
 		66CF362F1951765600C2F004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF362E1951765600C2F004 /* Foundation.framework */; };
 		66CF36311951765600C2F004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36301951765600C2F004 /* CoreGraphics.framework */; };
 		66CF36331951765600C2F004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CF36321951765600C2F004 /* UIKit.framework */; };
@@ -100,6 +104,9 @@
 		66B5270F1966CC68004675F6 /* VocabularyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabularyDetailViewController.m; sourceTree = "<group>"; };
 		66B527161966D5B0004675F6 /* WatchingListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchingListTableViewController.h; sourceTree = "<group>"; };
 		66B527171966D5B0004675F6 /* WatchingListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchingListTableViewController.m; sourceTree = "<group>"; };
+		66B5271A196BC46B004675F6 /* HowToUse.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = HowToUse.rtf; sourceTree = "<group>"; };
+		66B5271D196BC533004675F6 /* HowToUseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToUseViewController.h; sourceTree = "<group>"; };
+		66B5271E196BC533004675F6 /* HowToUseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToUseViewController.m; sourceTree = "<group>"; };
 		66CF362B1951765600C2F004 /* VocabularyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF362E1951765600C2F004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66CF36301951765600C2F004 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,6 +185,7 @@
 		66CF36221951765600C2F004 = {
 			isa = PBXGroup;
 			children = (
+				66B5271A196BC46B004675F6 /* HowToUse.rtf */,
 				667FB1971955C83E00C994B6 /* icon_29.png */,
 				667FB1981955C83E00C994B6 /* icon_40.png */,
 				667FB1991955C83E00C994B6 /* icon_58.png */,
@@ -242,6 +250,8 @@
 				66B5270F1966CC68004675F6 /* VocabularyDetailViewController.m */,
 				66B527161966D5B0004675F6 /* WatchingListTableViewController.h */,
 				66B527171966D5B0004675F6 /* WatchingListTableViewController.m */,
+				66B5271D196BC533004675F6 /* HowToUseViewController.h */,
+				66B5271E196BC533004675F6 /* HowToUseViewController.m */,
 			);
 			path = VocabularyHelp;
 			sourceTree = "<group>";
@@ -371,6 +381,7 @@
 				667FB1AC1955CA6600C994B6 /* icon_80.png in Resources */,
 				667FB1AD1955CA6600C994B6 /* icon_120.png in Resources */,
 				667FB1AE1955CA6600C994B6 /* icon_29.png in Resources */,
+				66B5271C196BC46B004675F6 /* HowToUse.rtf in Resources */,
 				667FB1B01955CA6600C994B6 /* icon_76.png in Resources */,
 				667FB1B11955CA6600C994B6 /* icon_40.png in Resources */,
 				667FB1B21955CA6600C994B6 /* InfoPlist.strings in Resources */,
@@ -388,6 +399,7 @@
 				667FB19E1955C83E00C994B6 /* icon_80.png in Resources */,
 				667FB1951955C52300C994B6 /* icon_120.png in Resources */,
 				667FB19B1955C83E00C994B6 /* icon_29.png in Resources */,
+				66B5271B196BC46B004675F6 /* HowToUse.rtf in Resources */,
 				667FB1941955C52300C994B6 /* icon_76.png in Resources */,
 				667FB19C1955C83E00C994B6 /* icon_40.png in Resources */,
 				66CF36391951765600C2F004 /* InfoPlist.strings in Resources */,
@@ -413,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B52720196BC533004675F6 /* HowToUseViewController.m in Sources */,
 				667FB1A11955CA6600C994B6 /* MainMyView.m in Sources */,
 				667FB1A21955CA6600C994B6 /* OneWord.m in Sources */,
 				66B527111966CC69004675F6 /* VocabularyDetailViewController.m in Sources */,
@@ -431,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B5271F196BC533004675F6 /* HowToUseViewController.m in Sources */,
 				66CF36F21951873900C2F004 /* MainMyView.m in Sources */,
 				667FB18B1952FC0300C994B6 /* OneWord.m in Sources */,
 				66B527101966CC69004675F6 /* VocabularyDetailViewController.m in Sources */,
