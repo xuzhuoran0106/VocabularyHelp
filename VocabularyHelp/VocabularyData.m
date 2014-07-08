@@ -69,7 +69,7 @@ static VocabularyData *sharedInstance = nil;
         
         _lastChecked=[NSMutableArray array];
         _lastCheckedLimit=5;
-        _currentIndex=-1;
+        _cIndex=-1;
 
     }
     
@@ -103,7 +103,7 @@ static VocabularyData *sharedInstance = nil;
     
     [_lastChecked removeAllObjects];
     _lastCheckedLimit=5;
-    _currentIndex=-1;
+    _cIndex=-1;
 
 }
 +(VocabularyData *)getSharedInstance
@@ -211,7 +211,7 @@ static VocabularyData *sharedInstance = nil;
         _doneThisTime=0;
         _stopHard=false;
         [_lastChecked removeAllObjects];
-        _currentIndex=-1;
+        _cIndex=-1;
     }
     catch(...)
     {
@@ -395,12 +395,13 @@ static VocabularyData *sharedInstance = nil;
     }
     //
     _currentIndex=0;
+    _cIndex=-1;
 
 }
 -(int)GetNextIndex
 {
-    _currentIndex=[self _GetNextIndex];
-    return _currentIndex;
+    _cIndex=[self _GetNextIndex];
+    return _cIndex;
 }
 -(int)_GetNextIndex
 {

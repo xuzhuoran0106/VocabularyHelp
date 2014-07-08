@@ -70,7 +70,7 @@
         [self.tableView endUpdates];
     }
     VocabularyData *data=[VocabularyData getSharedInstance];
-    int index = data.currentIndex;
+    int index = data.cIndex;
     _CurrentIndex=index;
     
     _LabelSelectedKanji.text=@"";

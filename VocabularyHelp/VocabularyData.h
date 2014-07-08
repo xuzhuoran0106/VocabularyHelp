@@ -19,7 +19,7 @@
 @property (copy) NSString *level;
 @property int doneThisTime;
 
-@property int currentIndex;
+@property int cIndex;
 
 
 -(void)Clear;
